@@ -2,6 +2,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.4.21"
+    //https://www.jacoco.org/jacoco/
+    //jacoco
 }
 
 group = "ru.netology.lesson4"

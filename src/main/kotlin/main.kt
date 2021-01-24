@@ -10,29 +10,8 @@ enum class CardTypes {
 }
 
 fun main()
-{//варианты сумм для перевода
-    val paymentSeq          = sequenceOf(10_00L, 100_00L)
- //варианты сумм для переводов за целый месяц
-    val lastMonthPaymentSeq = sequenceOf(10_00L, 80_000_00L)
- //перебор по всем сочетаниям и сумм переводов и сумм за месяц и всех видов карт
-    for (monthPayment in lastMonthPaymentSeq)
-    {
-        for (payment  in paymentSeq)
-        {
-            CardTypes.values().forEach {
-                val commission = calcPaymentCommission(
-                    cardType = it,
-                    lastMonthPayments = monthPayment,
-                    currentPayment = payment
-                )
-                println("Платежная система: $it, " +
-                        "текущий перевод: ${payment / 100L} рублей ${payment % 100L} копеек, " +
-                        "сумма переводов за месяц: ${monthPayment / 100L} рублей ${monthPayment % 100L} копеек")
-                println("Комиссия составит ${commission / 100L} рублей ${commission % 100L} копеек")
-                println("")
-            }
-        }
-    }
+{
+
 }
 
 /**
